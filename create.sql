@@ -17,3 +17,22 @@ create table enrollment(
 	year varchar, 
 	students5_estimated varchar
 );
+
+create table university(
+	iau_id1 char(12) primary key,
+	eng_name varchar(100) not null,
+	orig_name varchar(100) not null,
+	foundedyr integer not null,
+	private01 boolean not null,
+	latitude double precision,
+	longitude double precision,
+	phd_granting boolean not null,
+	divisions integer,
+	specialized boolean not null,
+);
+
+create table closed_university(
+	yr_closed integer not null,
+	iau_id1 char(12) not null,	
+	foreign key (iau_id1) references university(iau_id1) on delete cascade,
+)
