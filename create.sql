@@ -24,7 +24,7 @@ create table university(
 
 create table Enrollment_year(
     year integer not null,
-    iau_id1 char(12),
+    iau_id1 varchar(32) not null,
     students5_estimated integer,
     foreign key (iau_id1)
         references university(iau_id1) on delete cascade,
@@ -33,7 +33,7 @@ create table Enrollment_year(
 
 
 create table closed_university(
-    iau_id1 char(12) primary key,
+    iau_id1 varchar(32) primary key,
 	yr_closed integer not null,
 	foreign key (iau_id1)
 	    references university(iau_id1) on delete cascade
