@@ -1,6 +1,5 @@
 
-create table country_entity
-(
+create table country_entity(
     countrycode char(3) PRIMARY KEY,
     country     varchar not null,
     region      varchar not null,
@@ -15,7 +14,7 @@ create table country_entity
 --         references university(iau_id1)
 -- );
 create table Enrollment_year(
-    year integer not not null,
+    year integer not null,
     iau_id1 char(12),
     students5_estimated integer,
     foreign key (iau_id1)
