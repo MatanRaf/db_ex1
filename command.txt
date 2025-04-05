@@ -1,0 +1,1 @@
+cat enrollment.csv | psql -h dbcourse public -c "copy enrollment from STDIN DELIMITER ',' CSV HEADER"
