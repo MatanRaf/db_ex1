@@ -13,7 +13,7 @@ def process_file():
       with zf.open('enrollment.csv', 'r') as infile:
           reader = csv.reader(TextIOWrapper(infile, 'utf-8'))
           for row in reader:
-              # TO DO splits row into the different csv table files
+              # TODO splits row into the different csv table files
               enrollment_outwriter.writerow(row)
   enrollment_outfile.close()
 

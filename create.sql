@@ -18,8 +18,8 @@ create table university(
 	phd_granting boolean not null,
 	divisions integer,
 	specialized boolean not null,
-     foreign key (countrycode)
-        references country_entity(countrycode)
+    foreign key (countrycode)
+    	references country_entity(countrycode) on delete cascade
 );
 
 create table Enrollment_year(
@@ -27,7 +27,7 @@ create table Enrollment_year(
     iau_id1 char(12),
     students5_estimated integer,
     foreign key (iau_id1)
-        references university(iau_id1),
+        references university(iau_id1) on delete cascade,
     PRIMARY KEY(year,iau_id1)
 );
 
