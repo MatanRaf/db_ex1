@@ -18,6 +18,25 @@ create table enrollment(
 	students5_estimated varchar
 );
 
+
+create table country_entity
+(
+    countrycode varchar PRIMARY KEY,
+    country     varchar not null,
+    region      varchar not null,
+    incomegroup varchar not null,
+);
+
+create table Enrollment_year(
+    year varchar not null,
+    iau_id1 char(12),
+    students5_estimated integer,
+    foreign key (iau_id1)
+        references university(iau_id1)
+);
+
+
+
 create table university(
 	iau_id1 char(12) primary key,
 	eng_name varchar(100) not null,
