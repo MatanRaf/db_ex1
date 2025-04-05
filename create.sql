@@ -7,7 +7,7 @@ create table country_entity(
 );
 
 create table university(
-	iau_id1 char(12) primary key,
+	iau_id1 varchar(32) primary key,
     countrycode char(3) not null,
 	eng_name varchar not null,
 	orig_name varchar not null,
