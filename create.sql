@@ -6,13 +6,6 @@ create table country_entity(
     incomegroup varchar not null,
 );
 
--- create table Enrollment_year(
---     year varchar PRIMARY KEY ,
---     iau_id1 char(12),
---     students5_estimated integer,
---     foreign key (iau_id1)
---         references university(iau_id1)
--- );
 create table Enrollment_year(
     year integer not null,
     iau_id1 char(12),
