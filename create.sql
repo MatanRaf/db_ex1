@@ -9,8 +9,8 @@ create table country_entity(
 create table university(
 	iau_id1 varchar(32) primary key,
     countrycode char(3) not null,
-	eng_name varchar(100) not null,
-	orig_name varchar(100) not null,
+	eng_name varchar(255) not null,
+	orig_name varchar(255) not null,
 	foundedyr integer not null,
 	private01 boolean not null,
 	latitude double precision,
@@ -39,5 +39,5 @@ create table closed_university(
 	yr_closed integer not null,
 	foreign key (iau_id1)
 	    references university(iau_id1),
-    check(year < 2026),
+    check(year < 2026)
 );
