@@ -36,7 +36,6 @@ create table Enrollment_year(
 );
 
 
-
 create table university(
 	iau_id1 char(12) primary key,
 	eng_name varchar(100) not null,
