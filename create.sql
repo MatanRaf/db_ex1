@@ -3,7 +3,7 @@ create table country_entity(
     countrycode char(3) PRIMARY KEY,
     country     varchar not null,
     region      varchar not null,
-    incomegroup varchar not null,
+    incomegroup varchar not null
 );
 
 create table Enrollment_year(
@@ -12,7 +12,7 @@ create table Enrollment_year(
     students5_estimated integer,
     foreign key (iau_id1)
         references university(iau_id1),
-    PRIMARY KEY(year,iau_id1),
+    PRIMARY KEY(year,iau_id1)
 );
 
 create table university(
@@ -35,5 +35,5 @@ create table closed_university(
     iau_id1 char(12) primary key,
 	yr_closed integer not null,
 	foreign key (iau_id1)
-	    references university(iau_id1) on delete cascade,
+	    references university(iau_id1) on delete cascade
 );
