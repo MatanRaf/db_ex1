@@ -6,7 +6,7 @@ from zipfile import ZipFile
 # enrollment_outfile = open("enrollment.csv", 'w' , encoding='UTF8')
 # enrollment_outwriter = csv.writer(enrollment_outfile, delimiter=",", quoting=csv.QUOTE_MINIMAL)
 
-country_entities_outfile = open("country_entities.csv", 'w' , encoding='UTF8')
+country_entities_outfile = open("country_entity.csv", 'w' , encoding='UTF8')
 country_entities_outwriter = csv.writer(country_entities_outfile, delimiter=",", quoting=csv.QUOTE_MINIMAL)
 country_entities_column_indexes = [1, 0, 2, 3]
 country_entities_dictionary = {}
@@ -52,7 +52,7 @@ def process_file():
 
 # return the list of all tables
 def get_names():
-    return ["country_entities", "university", "enrollment_year", "closed_university"]
+    return ["country_entity", "university", "enrollment_year", "closed_university"]
 
 
 if __name__ == "__main__":
