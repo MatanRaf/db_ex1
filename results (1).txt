@@ -1,0 +1,71 @@
+Extracting Archive:
+Archive:  /home/jobe/runs/jobe_gNyxVo/submission
+  inflating: README                  
+  inflating: ex1.pdf                 
+  inflating: create.sql              
+  inflating: drop.sql                
+  inflating: ex1.py                  
+
+*************************************************************
+** Testing that all necessary files were submitted:
+README: 
+	SUBMITTED
+create.sql: 
+	SUBMITTED
+drop.sql: 
+	SUBMITTED
+ex1.py: 
+	SUBMITTED
+ex1.pdf: 
+	SUBMITTED
+
+*************************************************************
+** Checking for correct README format:
+OK!
+
+*************************************************************
+** Testing table creation:
+Output:
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+
+Errors:
+psql:create.sql:43: ERROR:  column "year" does not exist
+LINE 6:     check(year < 2026)
+                  ^
+
+
+*************************************************************
+** Testing process_file():
+OK!
+
+*************************************************************
+** Testing inserting data:
+Inserting country_entity.csv
+Output:
+COPY 187
+
+Inserting university.csv
+Output:
+COPY 15842
+
+Inserting enrollment_year.csv
+Output:
+COPY 136596
+
+Inserting closed_university.csv
+Errors:
+ERROR:  relation "closed_university" does not exist
+
+
+*************************************************************
+** Testing dropping of tables:
+Output:
+DROP TABLE
+DROP TABLE
+DROP TABLE
+
+Errors:
+psql:drop.sql:1: ERROR:  table "closed_university" does not exist
+

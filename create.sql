@@ -39,5 +39,5 @@ create table closed_university(
 	yr_closed integer not null,
 	foreign key (iau_id1)
 	    references university(iau_id1),
-    check(year < 2026)
+    check(yr_closed < 2026)
 );

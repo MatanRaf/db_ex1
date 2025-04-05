@@ -1,0 +1,64 @@
+Extracting Archive:
+Archive:  /home/jobe/runs/jobe_l8E3hb/submission
+  inflating: README                  
+  inflating: ex1.pdf                 
+  inflating: create.sql              
+  inflating: drop.sql                
+  inflating: ex1.py                  
+
+*************************************************************
+** Testing that all necessary files were submitted:
+README: 
+	SUBMITTED
+create.sql: 
+	SUBMITTED
+drop.sql: 
+	SUBMITTED
+ex1.py: 
+	SUBMITTED
+ex1.pdf: 
+	SUBMITTED
+
+*************************************************************
+** Checking for correct README format:
+OK!
+
+*************************************************************
+** Testing table creation:
+Output:
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+
+Errors:
+psql:create.sql:43: ERROR:  syntax error at or near ")"
+LINE 7: );
+        ^
+
+
+*************************************************************
+** Testing process_file():
+OK!
+
+*************************************************************
+** Testing inserting data:
+Inserting country_entity.csv
+Output:
+COPY 187
+
+Inserting university.csv
+Errors:
+ERROR:  value too long for type character varying(100)
+CONTEXT:  COPY university, line 92, column orig_name: "Ecole nationale sup??rieure en Sciences et Technologie du Sport Rachid Harra??gue Dely Ibrahim (ENS/..."
+
+
+*************************************************************
+** Testing dropping of tables:
+Output:
+DROP TABLE
+DROP TABLE
+DROP TABLE
+
+Errors:
+psql:drop.sql:1: ERROR:  table "closed_university" does not exist
+
